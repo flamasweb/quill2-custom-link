@@ -12,7 +12,7 @@ export default {
 		invalid_url_error: "Please insert a valid URL or email address."
 	},
 	autocomplete: {
-		active: true,
+		active: false,
 		fn: null
 	}
 };

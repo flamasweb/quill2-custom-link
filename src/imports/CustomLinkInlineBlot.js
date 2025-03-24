@@ -1,10 +1,15 @@
 import Quill from 'quill';
 
-const Link = Quill.import('formats/link');
+const Inline = Quill.import('blots/inline');
 
-export default class CustomLinkBlot extends Link {
-	
+export default class CustomLinkInlineBlot extends Inline {
+
+
+	static blotName = 'custom_link';
+	static tagName = 'a';
+
 	static create(value) {
+		console.log('CustomLinkInlineBlot.create', value);
 		let url = value;
 		let blank = false;
 		if (typeof value === 'object') {
@@ -17,6 +22,7 @@ export default class CustomLinkBlot extends Link {
 	}
 
 	static formats(node) {
+		console.log('CustomLinkInlineBlot.formats', node);
 		return {
 			url: node.getAttribute('href'),
 			blank: node.getAttribute('data-blank') || 'false'
@@ -24,10 +30,11 @@ export default class CustomLinkBlot extends Link {
 	}
 
 	format(name, value) {
-		if (name === 'link' && value) {
+		console.log('CustomLinkInlineBlot.format', name, value);
+		if (name === 'custom_link' && value) {
 			if (typeof value === 'object') {
 				if (value.text) this.domNode.textContent = value.text;
-				if (value.url) this.domNode.setAttribute('href', value.url);				
+				if (value.url) this.domNode.setAttribute('href', value.url);
 				this.domNode.setAttribute('data-blank', (value.blank === 'true' || value.blank === true).toString());
 				if (value.blank === 'true' || value.blank === true) {
 					this.domNode.setAttribute('target', '_blank');
@@ -39,10 +46,9 @@ export default class CustomLinkBlot extends Link {
 			} else {
 				this.domNode.setAttribute('href', value);
 			}
-		} else if (name === 'link' && !value) {
+		} else if (name === 'custom_link' && !value) {
 			super.format(name, value);
 		} else {
-			// Gestisci altri formati
 			super.format(name, value);
 		}
 	}

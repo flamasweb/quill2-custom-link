@@ -24,8 +24,6 @@ export default class CustomLinkTooltip extends Tooltip {
 
 	// Valori di default
 	url = null;
-	// typology = 'external';
-	// itemId = null;
 	blank = false;
 
 
@@ -153,7 +151,6 @@ export default class CustomLinkTooltip extends Tooltip {
 				}
 			}
 		}
-		
 		if (this.range.length > 0) {
 			this.quill.deleteText(this.range.index, this.range.length);
 		}

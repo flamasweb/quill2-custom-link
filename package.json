@@ -1,9 +1,13 @@
 {
   "name": "quill2-custom-link",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A module for Quill rich text editor to create custom links.",
   "main": "dist/quill2-custom-link.js",
-  "module": "src/index.js",
+  "module": "dist/quill2-custom-link.js",
+  "exports": {
+    "import": "./dist/quill2-custom-link.js",
+    "require": "./dist/quill2-custom-link.js"
+  },
   "scripts": {
     "dev": "webpack serve",
     "serve": "webpack serve",
@@ -20,13 +24,11 @@
     "quill",
     "custom",
     "link",
-	"autocomplete",
+    "autocomplete",
     "blot"
   ],
   "files": [
-    "demo",
-    "dist",
-	"src"
+    "dist"
   ],
   "author": "Flavio Massei",
   "license": "MIT",
@@ -34,6 +36,14 @@
     "url": "https://github.com/flamasweb/quill2-custom-link/issues"
   },
   "homepage": "https://github.com/flamasweb/quill2-custom-link#readme",
+  "peerDependencies": {
+    "quill": "^2.0.0"
+  },
+  "peerDependenciesMeta": {
+    "quill": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
@@ -59,13 +69,5 @@
     "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0"
-  },
-  "peerDependencies": {
-    "quill": "^2.0.0"
-  },
-  "peerDependenciesMeta": {
-    "quill": {
-      "optional": true
-    }
   }
 }
