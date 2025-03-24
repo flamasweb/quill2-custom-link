@@ -3,11 +3,7 @@
   "version": "1.0.0",
   "description": "A module for Quill rich text editor to create custom links.",
   "main": "dist/quill2-custom-link.js",
-  "module": "dist/quill2-custom-link.js",
-  "exports": {
-    "import": "./dist/quill2-custom-link.js",
-    "require": "./dist/quill2-custom-link.js"
-  },
+  "module": "src/index.js",
   "scripts": {
     "dev": "webpack serve",
     "serve": "webpack serve",
