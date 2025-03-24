@@ -1,9 +1,10 @@
 # Quill Custom Link Module
 
 A module that extends Quill rich text editor link management, adding the ability to:
-• Open the link in a new window;
-• Search for a resource in a personal database to create automatic links;
-• … Suggestions are welcome for future implementations :)
+
+- Open the link in a new window;
+- Search for a resource in a personal database to create automatic links;
+- … Suggestions are welcome for future implementations :)
 
 
 ### Install
