@@ -24,7 +24,9 @@
     "blot"
   ],
   "files": [
-    "dist"
+    "demo",
+    "dist",
+	"src"
   ],
   "author": "Flavio Massei",
   "license": "MIT",
