@@ -1,6 +1,6 @@
 {
   "name": "quill2-custom-link",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A module for Quill rich text editor to create custom links.",
   "main": "dist/quill2-custom-link.js",
   "module": "src/index.js",
